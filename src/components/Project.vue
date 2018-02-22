@@ -228,6 +228,63 @@ export default {
 }
 */
 
+@media (max-width: 375px) {
+  .header {
+    display: none;
+  }
+
+  .project {
+    margin-bottom: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    .item {
+      margin-top: 2rem;
+      position: relative;
+      &:before {
+        display: block;
+        text-align: center;
+        position: absolute;
+        top: -1.5rem;
+        left: 0; right: 0;
+      }
+      &:first-child {
+        font-weight: bold;
+        grid-column: 1/-1;
+        &:before { display: none; }
+      }
+      &:nth-child(2) {
+        &:before {
+          content: 'UX';
+        }
+      }
+      &:nth-child(3) {
+        &:before {
+          content: 'UI';
+        }
+      }
+      &:nth-child(4) {
+        &:before {
+          content: 'FE';
+        }
+      }
+      &:nth-child(5) {
+        &:before {
+          content: 'Status';
+        }
+      }
+      &:nth-child(6) {
+        &:before {
+          content: 'Due Date';
+        }
+      }
+      &:nth-child(7) {
+        &:before {
+          content: 'Priority';
+        }
+      }
+    }
+  }
+}
+
 </style>
 
 
