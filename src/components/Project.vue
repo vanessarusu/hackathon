@@ -21,10 +21,12 @@
         <!-- END - CSS modal -->
 
       </li>
-      <li class="item role UX">{{ roleUX }}</li>
-      <li class="item role UI">{{ roleUI }}</li>
-      <li class="item role FE">{{ roleFE }}</li>
-      <li class="item status" :class="projectStatus">{{ statusHeader }}</li>
+      <ul class="item role UX" v-dragula="projectUX" bag="UX" :data-id="dataId">{{ roleUX }}
+          <li v-for="(name, index) in projectUX" :key="name.index">{{ name }}</li>
+      </ul>
+      <ul class="item role UI" v-dragula="projectUI" bag="UI" :data-id="dataId">{{ roleUI }}</ul>
+      <ul class="item role FE" v-dragula="projectFE" bag="FE" :data-id="dataId">{{ roleFE }}</ul>
+      <ul class="item status" :class="projectStatus" v-dragula="projectUI" bag="status">{{ statusHeader }}</ul>
       <li class="item date">
         {{ projectDate }}
         <input id="date" type="date" />
@@ -37,12 +39,17 @@
         </select> 
       </li>
     </ul>
+  </div>
 </template>
 
 <script>
 export default {
   name: "Project",
   props: [
+    "projectUX",
+    "projectUI",
+    "projectFE",
+    "data-id",
     "projectName",
     "roleUX",
     "roleUI",
@@ -53,7 +60,8 @@ export default {
     "projectPriority"
   ],
   data() {
-    return {};
+    return {
+    };
   }
 };
 </script>

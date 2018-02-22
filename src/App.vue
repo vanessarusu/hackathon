@@ -5,7 +5,7 @@
       <router-link to="/about">About</router-link>
       <h1>AlloCap</h1>
     </header>
-    <router-view/>
+    <router-view ref="home"/>
   </div>
 </template>
 
