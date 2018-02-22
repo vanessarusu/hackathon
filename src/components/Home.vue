@@ -1,11 +1,11 @@
 <template>
   <div class="app">
-    <div class="project-list">
+    <main class="project-list">
       <project :projectName="projectHeader[0]" :roleUX="projectHeader[1]" :roleUI="projectHeader[2]" :roleFE="projectHeader[3]"  :statusHeader="projectHeader[4]"  :projectDate="projectHeader[5]" :projectPriority="projectHeader[6]" class="header"></project>
       <project v-for="(project, index) in projects" :key="project.index" :projectName="project.name" :projectDate="project.date" :projectStatus="project.status" :projectPriority="project.priority"></project>
-    </div>
+    </main>
 
-    <div class="actions">
+    <aside class="actions">
       <role :roleNames="roles.UX" :actionsHeader="projectHeader[1]"></role> 
       <role :roleNames="roles.UI" :actionsHeader="projectHeader[2]"></role> 
       <role :roleNames="roles.FE" :actionsHeader="projectHeader[3]"></role>
@@ -19,7 +19,7 @@
       </div> 
       <!-- <role :actionsHeader="projectHeader[2]" :statusHeader="projectHeader[4]"></role> 
       <role :actionsHeader="projectHeader[3]" :statusHeader="projectHeader[4]"></role>  -->
-    </div>
+    </aside>
   </div>
 </template>
 
@@ -105,20 +105,35 @@ export default {
 </script>
 
 <style lang="scss">
+.app {
+  max-width: 1190px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas: "content sidebar";
+}
+main {
+  padding: 0.5em;
+  grid-area: content;
+}
+aside {
+  padding: 0.5em;
+  grid-area: sidebar;
+}
+
 ul,
 li {
   list-style: none;
   margin: 0;
+  padding: 0;
 }
 
+/*
 .app {
   display: flex;
   justify-content: space-around;
 }
-
-.header {
-  margin-bottom: 30px;
-}
+*/
 
 .status {
   &.green {
@@ -134,14 +149,24 @@ li {
   }
 }
 
-.status-wrapper {
-  display: flex;
+.status-section {
+  h4 {
+    margin: 0 0 0.2rem 0;
+    padding: 1.72rem 0.5rem;
+    border-radius: 0.3rem;
+    background-color: lightblue;
+    display: block;
+  }
+  .status-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0.2rem;
 
-  .status {
-    width: 60px;
-    height: 30px;
-    padding: 10px;
-    margin: 10px;
+    .status {
+      min-height: 50px;
+      padding: 10px;
+      border-radius: 0.3rem;
+    }
   }
 }
 </style>
