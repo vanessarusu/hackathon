@@ -35,7 +35,7 @@ export default {
 
   h4 {
     margin: 0 0 0.2rem 0;
-    padding: 1.72rem 0.5rem;
+    padding: 1.5rem 0.5rem;
     border-radius: 0.3rem;
     background-color: lightblue;
     display: block;
