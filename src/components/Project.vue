@@ -61,7 +61,7 @@ export default {
   grid-gap: 0.2rem;
   grid-template-columns: 2fr repeat(4, 1fr) 150px 1fr;
   .item {
-    padding: 1.5rem 0.5rem;
+    padding: 1.5rem 0.2rem;
 		display: block;
     box-shadow: inset 0 0 0 1px lightgrey;
     border-radius: 0.3rem;
@@ -74,7 +74,7 @@ export default {
     }
     &.date {
       input {
-        max-width: 80%;
+        max-width: 85%;
       }
     }
   }
