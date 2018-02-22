@@ -4,12 +4,12 @@
         {{ projectName }}
 
         <!-- BEGIN - CSS modal -->
-        <label class="btn" for="modal-1"><span>...</span></label>
-        <input class="modal-state" id="modal-1" type="checkbox" />
+        <label class="btn" for="modal"><span>...</span></label>
+        <input class="modal-state" id="modal" type="checkbox" />
 				<div class="modal">
-					<label class="modal__bg" for="modal-1"></label>
+					<label class="modal__bg" for="modal"></label>
 					<div class="modal__inner">
-						<label class="modal__close" for="modal-1"></label>
+						<label class="modal__close" for="modal"></label>
 						<h2>Links</h2>
 						<ul>
 							<li><a href="#">Link to InVision Mockups</a></li>
@@ -26,7 +26,7 @@
       <li class="item role FE">{{ roleFE }}</li>
       <li class="item status" :class="projectStatus">{{ statusHeader }}</li>
       <li class="item date">
-        {{ projectDate }}
+        
         <input id="date" type="date" />
       </li>
       <li class="item priority">{{ projectPriority }}</li>
@@ -54,17 +54,21 @@ export default {
 
 <style scoped lang="scss">
 .project {
-  margin-bottom: 0.5rem;
   display: grid;
   justify-content: center;
-  border-radius: 0.2rem;
-  grid-gap: 0.2rem;
+  grid-column-gap: 0.3rem;
   grid-template-columns: 2fr repeat(4, 1fr) 150px 1fr;
+  &.header {
+    .item {
+      display: flex;
+      align-items: end;
+      justify-content: center;
+    }
+  }
   .item {
-    padding: 1.5rem 0.5rem;
+    padding: 0.5rem 0.5rem;
 		display: block;
-    box-shadow: inset 0 0 0 1px lightgrey;
-    border-radius: 0.3rem;
+    box-shadow: 1px 1px 0 0px #bbb;
     &.name {
       position: relative;
       &:hover .btn {
@@ -81,9 +85,8 @@ export default {
 }
 
 .header {
-  border-radius: 0.3rem;
-	background-color: lightblue;
   font-weight: bold;
+  box-shadow: 0 2px 1px 0px #333;
   .item {
     box-shadow: none;
     &:hover .btn {
@@ -148,7 +151,6 @@ export default {
   margin: auto;
   overflow: auto;
   background: #fff;
-  border-radius: 5px;
   padding: 1rem 2rem;
   height: 20%;
 }

@@ -31,30 +31,27 @@ export default {
 <style scoped lang="scss">
 
 .role-list {
-  margin-bottom: 30px;
+
 
   h4 {
     margin: 0 0 0.2rem 0;
     padding: 1.72rem 0.5rem;
-    border-radius: 0.3rem;
-    background-color: lightblue;
     display: block;
+    box-shadow: 0 2px 1px 0px #333;
   }
 
   .roles {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
-    border-radius: 0.2rem;
     grid-gap: 0.2rem;
 
       .role {
         margin-bottom: 0.2rem;
         padding: 0.5rem 0.2rem;
-        border-radius: 0.3rem;
-        background: #f2f2f2;
         display: block;
         cursor: pointer;
+        box-shadow: -1px 1px 0 0px #bbb;
       }
 
   }

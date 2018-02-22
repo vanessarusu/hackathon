@@ -105,6 +105,13 @@ export default {
 </script>
 
 <style lang="scss">
+
+body {
+  background: radial-gradient(circle, #f6f6f6 60%,#bbbbbb 100%);
+  height: 100vh;
+}
+
+
 .app {
   max-width: 1190px;
   margin: 0 auto;
@@ -135,17 +142,23 @@ li {
 }
 */
 
+.project-list {
+  display: grid;
+  grid-row-gap: 0.3rem;
+}
+
 .status {
+  box-shadow: none !important;
   &.green {
-    background: green;
+    background: #33d9b2;
   }
 
   &.yellow {
-    background: yellow;
+    background: #ffda79;
   }
 
   &.red {
-    background: red;
+    background: #ff5252;
   }
 }
 
@@ -153,8 +166,6 @@ li {
   h4 {
     margin: 0 0 0.2rem 0;
     padding: 1.72rem 0.5rem;
-    border-radius: 0.3rem;
-    background-color: lightblue;
     display: block;
   }
   .status-wrapper {
@@ -165,7 +176,6 @@ li {
     .status {
       min-height: 50px;
       padding: 10px;
-      border-radius: 0.3rem;
     }
   }
 }
