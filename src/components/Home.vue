@@ -113,7 +113,7 @@ body {
 
 
 .app {
-  max-width: 1190px;
+  max-width: 1440px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 3fr 1fr;
@@ -148,7 +148,6 @@ li {
 }
 
 .status {
-  box-shadow: none !important;
   &.green {
     background: #33d9b2;
   }
@@ -178,5 +177,14 @@ li {
       padding: 10px;
     }
   }
+}
+@media (max-width: 767px) {
+  .app {
+    max-width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-areas: "content"
+                         "sidebar";
+  }
+  aside { display: none; }
 }
 </style>

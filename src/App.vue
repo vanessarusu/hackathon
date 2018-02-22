@@ -3,6 +3,7 @@
     <header>
       <router-link to="/">Home</router-link>
       <router-link to="/about">About</router-link>
+      <h1>AlloCap</h1>
     </header>
     <router-view/>
   </div>
@@ -44,6 +45,12 @@ header a {
   padding: 0.5rem;
   background-color: lightgrey;
   border-radius: 0.3rem;
-  display: block;
+  display: none;
+}
+
+@media (max-width: 767px) {
+  body {
+    font-size: 0.875rem;
+  }
 }
 </style>

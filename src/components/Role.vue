@@ -35,7 +35,9 @@ export default {
 
   h4 {
     margin: 0 0 0.2rem 0;
+
     padding: 1.72rem 0.5rem;
+
     display: block;
     box-shadow: 0 2px 1px 0px #333;
   }
@@ -44,7 +46,7 @@ export default {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
-    grid-gap: 0.2rem;
+    grid-gap: 0.3rem;
 
       .role {
         margin-bottom: 0.2rem;
