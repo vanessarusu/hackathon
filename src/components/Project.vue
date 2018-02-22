@@ -89,8 +89,8 @@ export default {
     &:hover .btn {
       display: none;
     }
-    input { display: none; }
-    .modal { display: none; }
+    input[type="date"] { display: none; }
+    /* .modal { display: none; } */
   }
 }
 
@@ -117,7 +117,7 @@ export default {
   left: 0;
   bottom: 0;
   text-align: left;
-  background: rgba(0,0,0, 0.9);
+  background: rgba(0,0,0, 0.75);
   transition: opacity .25s ease;
   z-index: 1;
 }
@@ -144,13 +144,28 @@ export default {
   right: 0;
   bottom: 0;
   left: 0;
-  width: 50%;
+  width: 40%;
   margin: auto;
   overflow: auto;
   background: #fff;
   border-radius: 5px;
   padding: 1rem 2rem;
   height: 20%;
+  
+  h2 {
+    text-align: center;
+  }
+  ul {
+    width: 50%;
+    margin: 0 auto;
+    li {
+      list-style-type: disc;
+      text-align: left;
+      a {
+        font-weight: normal;
+      }
+    }
+  }
 }
 .modal__close {
   position: absolute;
@@ -183,13 +198,6 @@ export default {
   transform: rotate(-45deg);
 }
 
-.modal__inner ul {
-  width: 50%;
-  margin: 0 auto;
-}
-.modal__inner ul li {
-  text-align: left;
-}
 
 /*
 .project {
