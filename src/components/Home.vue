@@ -1,6 +1,6 @@
 <template>
   <div class="app">
-    <main class="project-list">
+    <main class="project-list" ref="testref">
       <project :projectName="projectHeader[0]" :roleUX="projectHeader[1]" :roleUI="projectHeader[2]" :roleFE="projectHeader[3]"  :statusHeader="projectHeader[4]"  :projectDate="projectHeader[5]" :projectPriority="projectHeader[6]" class="header"></project>
       
       <project v-for="(project, index) in projects" :data-id="project.id" :key="project.index" :projectName="project.name" :projectDate="project.date" :projectStatus="project.status" :projectPriority="project.priority" :projectUX="project.UX" :projectUI="project.UI" :projectFE="project.FE"></project>
@@ -18,8 +18,6 @@
           <li class="status red">red</li>
         </ul>
       </div> 
-      <!-- <role :actionsHeader="projectHeader[2]" :statusHeader="projectHeader[4]"></role> 
-      <role :actionsHeader="projectHeader[3]" :statusHeader="projectHeader[4]"></role>  -->
     </aside>
   </div>
 </template>

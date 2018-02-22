@@ -4,7 +4,6 @@
     <h4>{{ actionsHeader }}</h4>
     <ul class="roles container" v-dragula="actionsHeader" :bag="actionsHeader">
       <li class="role drag-list-item" v-for="(name, index) in roleNames" :key="name.index">{{ name }}
-
       </li>
     </ul>
   </div>
@@ -38,32 +37,23 @@ export default {
 <style scoped lang="scss">
 
 .role-list {
-  margin-bottom: 30px;
+  border: 1px solid #f2f2f2;
+  margin-bottom: 60px;
 
-  h4 {
-    margin: 0 0 0.2rem 0;
-    padding: 1.5rem 0.5rem;
-    border-radius: 0.3rem;
-    background-color: lightblue;
-    display: block;
-  }
+  .role-section {
 
-  .roles {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: center;
-    border-radius: 0.2rem;
-    grid-gap: 0.2rem;
+    .roles {
+      display: flex;
+      flex-wrap: wrap;
 
       .role {
-        margin-bottom: 0.2rem;
-        padding: 0.5rem 0.2rem;
-        border-radius: 0.3rem;
-        background: #f2f2f2;
-        display: block;
+        width: 20%;
         cursor: pointer;
+        margin: 10px;
+        padding: 10px;
+        background: #f2f2f2;
       }
-
+    }
   }
 }
 </style>
