@@ -169,4 +169,13 @@ li {
     }
   }
 }
+@media (max-width: 767px) {
+  .app {
+    max-width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-areas: "content"
+                         "sidebar";
+  }
+  aside { display: none; }
+}
 </style>

@@ -46,4 +46,10 @@ header a {
   border-radius: 0.3rem;
   display: block;
 }
+
+@media (max-width: 767px) {
+  body {
+    font-size: 0.875rem;
+  }
+}
 </style>
