@@ -1,21 +1,29 @@
 <template>
-  <ul class="project">
+  <div>
+    <ul class="project" id="project">
     <li class="items">
       <div class="item name">{{ projectName }}</div>
-      <div class="item role UX">{{ roleUX }}</div>
-      <div class="item role UI">{{ roleUI }}</div>
-      <div class="item role FE">{{ roleFE }}</div>
-      <div class="item status" :class="projectStatus">{{ statusHeader }}</div>
+      <div class="item role UX" v-dragula="projectUX" bag="UX" :data-id="dataId">{{ roleUX }}
+        <div v-for="(name, index) in projectUX">{{ name }}</div>
+      </div>
+      <div class="item role UI" v-dragula="projectUI" bag="UI" :data-id="dataId">{{ roleUI }}</div>
+      <div class="item role FE" v-dragula="projectFE" bag="FE" :data-id="dataId">{{ roleFE }}</div>
+      <div class="item status" :class="projectStatus2" v-dragula="projectUI" bag="status">{{ statusHeader }}</div>
       <div class="item date"> {{ projectDate }}</div>
-      <div class="item priority"> {{ projectPriority }}</div>
+      <div class="item priority" v-dragula="projectName" bag="second-bag"> {{ projectPriority }}</div>
     </li>
   </ul>
+  </div>
 </template>
 
 <script>
 export default {
   name: "Project",
   props: [
+    "projectUX",
+    "projectUI",
+    "projectFE",
+    "data-id",
     "projectName",
     "roleUX",
     "roleUI",

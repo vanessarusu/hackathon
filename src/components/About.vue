@@ -6,7 +6,7 @@
     <h2>Container One</h2>
   <div class="container" v-dragula="colOne" bag="first-bag">
     <!-- with click -->
-    <div class="drag-list-item one" v-for="text in colOne" @click="onClick">pink - {{text}}</div>
+    <div class="drag-list-item one" v-for="text in colOne">pink - {{text}}</div>
   </div>
   <h2>Container Two</h2>
   <div class="container" v-dragula="colTwo" bag="first-bag">

@@ -1,10 +1,13 @@
 <template>
-<div class="role-list">
+<div class="role-list wrapper">
   <div class="role-section">
     <h4>{{ actionsHeader }}</h4>
-    <ul class="roles">
-      <li class="role" v-for="(name, index) in roleNames" :key="name.index">{{ name }}</li>
+    <ul class="roles container" v-dragula="actionsHeader" :bag="actionsHeader">
+      <li class="role drag-list-item" v-for="(name, index) in roleNames" :key="name.index">{{ name }}
+
+      </li>
     </ul>
+  </div>
   </div>
 </div>
 </template>
@@ -22,10 +25,12 @@ export default {
     "statusHeader",
     "projectPriority",
     "actionsHeader",
-    "roleNames"
+    "roleNames",
+    "projectParticipants"
   ],
   data() {
-    return {};
+    return {
+    };
   }
 };
 </script>
