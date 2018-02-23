@@ -83,7 +83,7 @@ export default {
   .item {
     padding: 0.5rem 0.5rem;
 		display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-direction: column;
     box-shadow: 1px 1px 0 0px #bbb;
