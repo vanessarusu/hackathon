@@ -179,9 +179,12 @@ li {
 
 .status-section {
   h4 {
-    margin: 0 0 0.2rem 0;
-    padding: 1.72rem 0.5rem;
+    font-size: 30px;
+    text-transform: uppercase;
     display: block;
+    margin: 0 auto 10px;
+    font-weight: bold;
+    padding-top: 30px;
   }
   .status-wrapper {
     display: grid;

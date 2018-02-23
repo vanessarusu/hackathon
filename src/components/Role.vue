@@ -2,9 +2,10 @@
 <div class="role-list wrapper">
   <div class="role-section">
     <h4>{{ actionsHeader }}</h4>
-    <ul class="roles container" v-dragula="actionsHeader" :bag="actionsHeader">
-      <li class="role drag-list-item" v-for="(name, index) in roleNames" :key="name.index">{{ name }}
-      </li>
+    <div class="roles container" v-dragula="actionsHeader" :bag="actionsHeader">
+      <span class="role drag-list-item" v-for="(name, index) in roleNames" :key="name.index">
+        {{ name }}
+      </span>
     </ul>
   </div>
   </div>
@@ -39,13 +40,26 @@ export default {
 .role-list {
 
 
-  h4 {
+h4 {
     margin: 0 0 0.2rem 0;
-
-    padding: 1.72rem 0.5rem;
-
-    display: block;
-    box-shadow: 0 2px 1px 0px #333;
+    padding: 1.5rem 0.5rem;
+    display: flex;
+    font-size: 80px;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    align-content: center;
+    z-index: 10;
+  }
+  h4:before{
+    content:"";
+    position: absolute;
+    bottom: 50%;
+    width: 50%;
+    height: 7px;
+    background: #d3d3d370;
+    text-align: center;
+    z-index: -1;
   }
 
     .roles {

@@ -21,12 +21,12 @@
         <!-- END - CSS modal -->
 
       </li>
-      <ul class="item role UX" v-dragula="projectUX" bag="UX" :data-id="dataId">{{ roleUX }}
-          <li v-for="(name, index) in projectUX" :key="name.index">{{ name }}</li>
-      </ul>
-      <ul class="item role UI" v-dragula="projectUI" bag="UI" :data-id="dataId">{{ roleUI }}</ul>
-      <ul class="item role FE" v-dragula="projectFE" bag="FE" :data-id="dataId">{{ roleFE }}</ul>
-      <ul class="item status" :class="projectStatus" v-dragula="projectUI" bag="status">{{ statusHeader }}</ul>
+      <li class="item role UX" v-dragula="projectUX" bag="UX" :data-id="dataId">{{ roleUX }}
+          <!-- <span v-for="(name, index) in projectUX" :key="name.index">{{ name }}</span> -->
+      </li>
+      <li class="item role UI" v-dragula="projectUI" bag="UI" :data-id="dataId">{{ roleUI }}</li>
+      <li class="item role FE" v-dragula="projectFE" bag="FE" :data-id="dataId">{{ roleFE }}</li>
+      <li class="item status" :class="projectStatus" v-dragula="projectUI" bag="status">{{ statusHeader }}</li>
       <li class="item date">
         {{ projectDate }}
         <input id="date" type="date" />
@@ -72,12 +72,13 @@ export default {
   justify-content: center;
   grid-column-gap: 0.3rem;
   grid-template-columns: 2fr repeat(4, 1fr) 150px 1fr;
-  grid-template-rows: 65px;
+  grid-template-rows: minmax(65px, auto);
   &.header {
     .item {
       display: flex;
       align-items: end;
       justify-content: center;
+      flex-direction: row;
     }
   }
   .item {
@@ -85,6 +86,7 @@ export default {
 		display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     box-shadow: 1px 1px 0 0px #bbb;
     &.name {
       position: relative;
