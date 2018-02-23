@@ -164,6 +164,13 @@ li {
 }
 
 .status {
+  position: relative;
+  padding: 0 !important;
+  li {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
   &.green {
     background: #33d9b2;
   }
