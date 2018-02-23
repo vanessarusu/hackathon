@@ -46,7 +46,7 @@ export default {
           date: "2018/1/1",
           status: "red",
           priority: "1",
-          UX: ["one", "two"],
+          UX: [],
           UI: [],
           FE: []
         },
@@ -107,9 +107,9 @@ export default {
         }
       ],
       roles: {
-        UX: ["Daniela", "Fernanda"],
-        UI: ["Sebastian", "Kenneth"],
-        FE: ["Carlos", "Declan", "Jinn", "Michel", "Kevin"]
+        UX: ["Daniela", "Fernanda", "Estela", "Ann", "Olga"],
+        UI: ["Sebastian", "Kenneth", "Nikki", "Edward", "Lisa"],
+        FE: ["Carlos", "Declan", "Jinn", "Michel", "Kevin", "Vanessa"]
       }
     };
   },
