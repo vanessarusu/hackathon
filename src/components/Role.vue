@@ -2,9 +2,10 @@
 <div class="role-list wrapper">
   <div class="role-section">
     <h4>{{ actionsHeader }}</h4>
-    <ul class="roles container" v-dragula="actionsHeader" :bag="actionsHeader">
-      <li class="role drag-list-item" v-for="(name, index) in roleNames" :key="name.index">{{ name }}
-      </li>
+    <div class="roles container" v-dragula="actionsHeader" :bag="actionsHeader">
+      <span class="role drag-list-item" v-for="(name, index) in roleNames" :key="name.index">
+        {{ name }}
+      </span>
     </ul>
   </div>
   </div>
