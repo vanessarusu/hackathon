@@ -49,7 +49,6 @@ h4 {
     position: relative;
     align-items: center;
     align-content: center;
-    z-index: 10;
   }
   h4:before{
     content:"";

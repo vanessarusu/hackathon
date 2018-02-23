@@ -166,24 +166,29 @@ export default {
   right: 0;
   bottom: 0;
   left: 0;
-  width: 40%;
+  width: 320px;
   margin: auto;
   overflow: auto;
   background: #fff;
-  padding: 1rem 2rem;
-  height: 20%;
+  padding: 20px;
+  height: 280px;
   
   h2 {
     text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #bbb;
   }
   ul {
-    width: 50%;
+    width: 60%;
     margin: 0 auto;
     li {
       list-style-type: disc;
       text-align: left;
+      margin-bottom: 16px;
       a {
         font-weight: normal;
+        text-decoration: none;
+        color: #0984e3;
       }
     }
   }
