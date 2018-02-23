@@ -105,7 +105,7 @@ export default {
 
 .header {
   font-weight: bold;
-  box-shadow: 0 2px 1px 0px #333;
+  border-bottom: solid 2px #333;
   .item {
     box-shadow: none;
     &:hover .btn {
