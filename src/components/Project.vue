@@ -31,11 +31,11 @@
         {{ projectDate }}
         <input id="date" type="date" />
       </li>
-      <li class="item priority">{{ projectPriority }}
-       <select>
-          <option value="volvo">1</option>
-          <option value="saab">2</option>
-          <option value="mercedes">3</option>
+      <li class="item priority">
+       <select v-modal="projectPriority">
+          <option value="volvo" :selected="projectPriority === '1'">1</option>
+          <option value="saab" :selected="projectPriority === '2'">2</option>
+          <option value="mercedes" :selected="projectPriority === '3'">3</option>
         </select> 
       </li>
     </ul>
