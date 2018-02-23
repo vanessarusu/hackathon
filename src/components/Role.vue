@@ -55,6 +55,7 @@ h4 {
     content:"";
     position: absolute;
     bottom: 50%;
+    left: 25%;
     width: 50%;
     height: 7px;
     background: #d3d3d370;

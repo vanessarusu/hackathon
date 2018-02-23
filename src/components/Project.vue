@@ -76,9 +76,8 @@ export default {
   &.header {
     .item {
       display: flex;
-      align-items: end;
+      align-items: center;
       justify-content: center;
-      flex-direction: row;
     }
   }
   .item {
