@@ -32,13 +32,18 @@ body {
 }
 
 header {
-  margin: 0.5rem 0;
+  margin: 0;
   display: grid;
   grid-template-columns: repeat(2, 100px);
   grid-gap: 0.2rem;
   justify-content: center;
   justify-items: center;
   align-items: center;
+}
+header h1 {
+  text-transform: uppercase;
+  font-size: 48px;
+  margin: 30px 0 0;
 }
 header a {
   width: 100%;
