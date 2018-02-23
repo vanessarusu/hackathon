@@ -75,35 +75,35 @@ export default {
           name: "Costoco Checkout",
           date: "2018/1/1",
           status: "green",
-          priority: "4"
+          priority: "1"
         },
         {
           id: 5,
           name: "Unified Builder",
           date: "2018/1/1",
           status: "red",
-          priority: "5"
+          priority: "3"
         },
         {
           id: 6,
           name: "Costco SEO",
           date: "2018/1/1",
           status: "green",
-          priority: "6"
+          priority: "2"
         },
         {
           id: 7,
           name: "Sam's SEO",
           date: "2018/1/1",
           status: "green",
-          priority: "7"
+          priority: "2"
         },
         {
           id: 8,
           name: "Costco Blog",
           date: "2018/1/1",
           status: "red",
-          priority: "8"
+          priority: "3"
         }
       ],
       roles: {
